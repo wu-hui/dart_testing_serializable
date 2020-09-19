@@ -1,0 +1,26 @@
+name: testing_serializable
+description: Library to provide serializability from Dart objects to Testing documents.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 0.0.1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  equatable: ^1.2.3
+  optional: ^5.0.0
+  json_annotation: ^3.0.1
+  source_gen: ^0.9.6
+  logging: 0.11.4
+
+dev_dependencies:
+  test: any
+  json_serializable: ^3.4.1
+  build_runner: ^1.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec

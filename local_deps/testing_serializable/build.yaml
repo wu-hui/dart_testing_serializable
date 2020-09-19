@@ -1,0 +1,9 @@
+builders:
+  firestore_serializable:
+    import: "package:testing_serializable/testing_serializable.dart"
+    builder_factories: ["testingSerializable"]
+    build_extensions: {".dart": [".g.dart"]}
+    auto_apply: dependents
+    build_to: cache
+    runs_before: ["json_serializable:json_serializable"]
+    applies_builders: ["source_gen|json_serializable:json_serializable|combining_builder"]
