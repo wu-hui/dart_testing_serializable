@@ -4,6 +4,6 @@ builders:
     builder_factories: ["testingSerializable"]
     build_extensions: {".dart": [".g.dart"]}
     auto_apply: dependents
-    build_to: cache
+    build_to: source
     runs_before: ["json_serializable:json_serializable"]
-    applies_builders: ["source_gen|json_serializable:json_serializable|combining_builder"]
+    applies_builders: ["json_serializable:json_serializable"]

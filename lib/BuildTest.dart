@@ -1,6 +1,7 @@
 import 'package:testing_serializable/testing_serializable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+part 'BuildTest.testing_serializable.dart';
 part 'BuildTest.g.dart';
 
 @TestingSerializable()

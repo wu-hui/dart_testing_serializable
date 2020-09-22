@@ -3,18 +3,19 @@
 part of 'BuildTest.dart';
 
 // **************************************************************************
-// DumbTestingGenerator
+// JsonSerializableGenerator
 // **************************************************************************
 
-@JsonSerializable(
-    explicitToJson: true) // explicitToJson is required by Testing API
-class _$ValueJsonSerializableHelper {
-  int a;
-
-  String b;
-
-  factory _$ValueJsonSerializableHelper.fromJson(Map<String, dynamic> data) =>
-      _$_$ValueJsonSerializableHelperFromJson(data);
-
-  Map<String, dynamic> toJson() => _$_$ValueJsonSerializableHelperToJson(this);
+_$ValueJsonSerializableHelper _$_$ValueJsonSerializableHelperFromJson(
+    Map<String, dynamic> json) {
+  return _$ValueJsonSerializableHelper()
+    ..a = json['a'] as int
+    ..b = json['b'] as String;
 }
+
+Map<String, dynamic> _$_$ValueJsonSerializableHelperToJson(
+        _$ValueJsonSerializableHelper instance) =>
+    <String, dynamic>{
+      'a': instance.a,
+      'b': instance.b,
+    };

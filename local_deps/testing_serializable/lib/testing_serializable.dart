@@ -13,8 +13,8 @@ class TestingSerializable {
 }
 
 Builder testingSerializable(BuilderOptions options) {
-  return SharedPartBuilder(
-      [DumbTestingGenerator()], 'testing_serializable');
+  return PartBuilder(
+      [DumbTestingGenerator()], '.testing_serializable.dart');
 }
 
 /// For every class annotated with TestingSerializable, generate a ${CLASS_NAME}JsonSerializableImpl
@@ -87,6 +87,8 @@ class _GeneratorHelper {
     // var accessibleFieldSet = accessibleFields.values.toSet();
     yield* createFields(accessibleFields, unavailableReasons);
 
+    yield createDefaultConstructor();
+
     yield createFactory();
 
     /*
@@ -147,6 +149,10 @@ class ${_className} {
   String createToJson() {
     return '  Map<String, dynamic> toJson() '
         '    => _\$${_className}ToJson(this);';
+  }
+
+  String createDefaultConstructor() {
+    return '  ${_className}();';
   }
 }
 
